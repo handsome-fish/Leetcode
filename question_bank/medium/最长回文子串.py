@@ -1,6 +1,7 @@
 # 该程序用动态规划算法
 # 判断回文串可用判断s == s[::-1]
 
+
 def longestPalindrome(s):
     length = len(s)
     # 如果本身为回文数,则直接返回
@@ -20,9 +21,8 @@ def longestPalindrome(s):
             max_len += 1
     return s[begin:begin + max_len]
 
-if __name__=="__main__":
-    s = "a"
+
+if __name__ == "__main__":
+    s = "abaa"
     s = longestPalindrome(s)
     print(s)
-
-

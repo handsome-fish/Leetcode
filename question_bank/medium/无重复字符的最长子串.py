@@ -1,5 +1,6 @@
 # 用字典存储字符及其索引
 
+
 def lengthOfLongestSubstring(s):
     # 设置最大长度
     max_len = 0
@@ -17,7 +18,8 @@ def lengthOfLongestSubstring(s):
         max_len = max(max_len, i - start + 1)
     return max_len
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     s = "pwwkew"
     max_len = lengthOfLongestSubstring(s)
     print(max_len)
