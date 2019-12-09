@@ -35,13 +35,13 @@ def binarySearch(matrix, target):
     row = m - 1
     col = 0
     while col < n and row >= 0:
-        print(row, col)
+        # print(row, col)
         if matrix[row][col] > target:
             row -= 1
-            print(row, col)
+            # print(row, col)
         elif matrix[row][col] < target:
             col += 1
-            print(row, col)
+            # print(row, col)
         else:
             return True
     return False
