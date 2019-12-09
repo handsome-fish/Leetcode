@@ -20,31 +20,31 @@ def searchMatrix(matrix, target):
 
 
 # 二分查找
-# def binarySearch(matrix, target):
-#     """
-#     :type matrix: List[List[int]]
-#     :type target: int
-#     :rtype: bool
-#     """
-#     m = len(matrix)
-#     if m == 0:
-#         return False
-#     n = len(matrix[0])
-#
-#     # 设置指针
-#     row = m - 1
-#     col = 0
-#     while col < n and row >= 0:
-#         print(row, col)
-#         if matrix[row][col] > target:
-#             row -= 1
-#             print(row, col)
-#         elif matrix[row][col] < target:
-#             col += 1
-#             print(row, col)
-#         else:
-#             return True
-#     return False
+def binarySearch(matrix, target):
+    """
+    :type matrix: List[List[int]]
+    :type target: int
+    :rtype: bool
+    """
+    m = len(matrix)
+    if m == 0:
+        return False
+    n = len(matrix[0])
+
+    # 设置指针
+    row = m - 1
+    col = 0
+    while col < n and row >= 0:
+        print(row, col)
+        if matrix[row][col] > target:
+            row -= 1
+            print(row, col)
+        elif matrix[row][col] < target:
+            col += 1
+            print(row, col)
+        else:
+            return True
+    return False
 
 
 if __name__ == "__main__":
@@ -59,5 +59,5 @@ if __name__ == "__main__":
     target = 15
     res = searchMatrix(matrix1, target)
     print(res)
-    # res = binarySearch(matrix, target)
+    res = binarySearch(matrix, target)
     print(res)
