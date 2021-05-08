@@ -35,6 +35,7 @@ class Solution:
                 return False
             if k == len(word) - 1:
                 return True
+            # 代表此元素已访问过，防止之后搜索时重复访问
             board[i][j] = ''
             res = dfs(i - 1, j, k + 1) or dfs(i, j - 1, k + 1) or dfs(i + 1, j, k + 1) or dfs(i, j + 1, k + 1)
             board[i][j] = word[k]
