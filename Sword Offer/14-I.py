@@ -28,8 +28,8 @@ import math
 
 class Solution:
     def cuttingRope(self, n: int) -> int:
-        if n == 2:
-            return 1
+        if n <= 3:
+            return n-1
         # 通过数学推导可知，让绳子尽量以长度3等分，是乘积最大的。剩下的一段如果为2，那就不分；如果为1，就拿出一段3，组成2*2>3*1
         number, remain = n // 3, n % 3
         if remain == 0:
