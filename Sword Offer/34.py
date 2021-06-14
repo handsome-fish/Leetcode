@@ -51,7 +51,14 @@ class Solution:
             dfs(sum_num, node.left)
             dfs(sum_num, node.right)
             tmp.pop()
+            print(tmp)
 
         tmp, res = [], []
         dfs(0, root)
         return res
+
+
+t = TreeNode(5, TreeNode(4, TreeNode(11, TreeNode(7), TreeNode(2))),
+             TreeNode(8, TreeNode(13), TreeNode(4, TreeNode(5), TreeNode(1))))
+s = Solution()
+s.pathSum(t, 22)
